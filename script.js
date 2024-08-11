@@ -6,3 +6,14 @@ const urls = [
 
 // Don't change the above line
 // Write your code here
+async function fetchAndLog(url) {
+	try {
+		const response = await fetch(url);
+		const data = await response.json();
+		console.log(`Response from ${url}:`, data);
+	}catch(error) {
+		console.log(`Error fatching ${url}:`, error);
+	}
+}
+
+urls.forEach((url) => fetchAndLog(url));
