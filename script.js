@@ -10,9 +10,9 @@ async function fetchAndLog(url) {
 	try {
 		const response = await fetch(url);
 		const data = await response.json();
-		console.log(`Response from ${url}`, data);
+		console.log(data);
 	}catch(error) {
-		console.log(`Error fatching ${url}`, error);
+		console.log(error);
 	}
 }
 
